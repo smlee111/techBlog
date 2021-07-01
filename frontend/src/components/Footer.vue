@@ -7,16 +7,16 @@
             <li>
                 <p class="tit">About Tech</p>
                 <ul class="depth">
-                    <li><a href="">Filo</a></li>
-                    <li><a href="">Filo Game</a></li>
-                    <li><a href="">TravelMaker</a></li>
+                    <li><a href="" onclick="alert('준비중입니다!');">Filo</a></li>
+                    <li><a href="" onclick="alert('준비중입니다!');">Filo Game</a></li>
+                    <li><a href="" onclick="alert('준비중입니다!');">TravelMaker</a></li>
                 </ul>
             </li>
             <li>
                 <p class="tit">About Channel</p>
                 <ul class="depth">
-                    <li><a href="">Blog GitHub</a></li>
-                    <li><a href="">Filo GitHub</a></li>
+                    <li><a href="https://github.com/smlee111/techBlog">Blog GitHub</a></li>
+                    <li><a href="https://github.com/TeamFilo/filo">Filo GitHub</a></li>
                 </ul>
             </li>
         </ul>

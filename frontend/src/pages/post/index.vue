@@ -1,5 +1,5 @@
 <template>
-    <div class="section_featured">        
+    <div class="section_featured">
         <div class="post">
             <div class="inner">
                 <p class="tit">Featured Posts</p>
@@ -7,6 +7,7 @@
             </div>
             <div class="inner">
                 <p class="tit">Related Posts</p>
+                
             </div>
         </div>
     </div>

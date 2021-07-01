@@ -3,5 +3,5 @@ module.exports = {
     publicPath: process.env.NODE_ENV === 'production'
     ? '/techBlog/'
     : '/',
-    outputDir:'docs'
+    outputDir:'../docs'
 }

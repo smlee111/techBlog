@@ -1,18 +1,16 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <p class="tit">Featured Posts</p>
+    <!-- 여기에 승민 컨포넌트 작성 -->
+    <p class="tit">Related Posts</p>
+    <!-- 여기에 승헌 컴포넌트 작성 -->
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
 }
 </script>
+
+<style scoped>
+</style>

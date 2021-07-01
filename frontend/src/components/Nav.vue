@@ -1,5 +1,5 @@
 <template>
-    <div class="nav">
+    <div class="nav" v-on:scroll.passive="onScroll">
        <p class="logo"><router-link to="/">LeeSeungMin <span>Tech</span></router-link></p>
        <ul class="menu">
            <li><router-link to="/about">About</router-link></li>

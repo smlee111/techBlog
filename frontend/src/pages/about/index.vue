@@ -1,6 +1,8 @@
 <template>
-  <div class="about">
-    <h1>about</h1>
+  <div class="section_featured">
+    <div class="about">
+      <h1>about</h1>
+    </div>
   </div>
 </template>
 

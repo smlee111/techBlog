@@ -10,6 +10,16 @@
     </div>
 </template>
 
+<script>
+const scrollBehavior = function (to, from, savedPosition) {
+    
+}
+
+export default {
+
+}
+</script>
+
 <style scoped>
     .top {background-image:url(../assets/images/intro_blog.png);}
     .top .w1160 {width:1160px; height: 474px; margin:0 auto; padding:220px 0 0;}

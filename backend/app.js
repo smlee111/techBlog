@@ -8,6 +8,23 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+var bodyParser  = require('body-parser');
+var mongoose    = require('mongoose');
+
+// [CONFIGURE APP TO USE bodyParser]
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+// [CONFIGURE SERVER PORT]
+var port = process.env.PORT || 3000;
+
+// [CONFIGURE ROUTER]
+var router = require('./routes')(app)
+
+// [RUN SERVER]
+// var server = app.listen(port, function() {
+//   console.log("Express server has started on port " + port)
+// });
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -37,5 +54,45 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+// [ CONFIGURE mongoose ]
+
+// CONNECT TO MONGODB SERVER
+var db = mongoose.connection;
+db.on('error', console.error);
+db.once('open', function(){
+    // CONNECTED TO MONGODB SERVER
+    console.log("Connected to mongod server");
+});
+
+mongoose.connect('mongodb+srv://smlee:<910322>@cluster0.9uwjk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
+
+// DEFINE MODEL
+var Book = require('./models/book');
+
+var router = require('./routes')(app, Book);
+
+
+
+
+app.post('/api/books', function(req, res){
+  var book = new Book();
+  book.title = req.body.name;
+  book.author = req.body.author;
+  book.published_date = new Date(req.body.published_date);
+
+  book.save(function(err){
+      if(err){
+          console.error(err);
+          res.json({result: 0});
+          return;
+      }
+
+      res.json({result: 1});
+
+  });
+});
+
+
 
 module.exports = app;

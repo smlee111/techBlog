@@ -5,7 +5,7 @@
     </div>
     <div id="container">
       <Top/>
-      <transition><router-view/></transition>
+      <router-view/>
     </div>
     <Footer/>
   </div>

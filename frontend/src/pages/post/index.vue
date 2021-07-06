@@ -14,11 +14,9 @@
 </template>
 
 <script>
-import Top from "@/components/Top";
 import SwiperFeatured from '@/components/SwiperFeatured.vue'
 export default {
     components: {
-        Top,
         SwiperFeatured
     }
 }

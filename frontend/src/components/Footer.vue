@@ -5,7 +5,7 @@
                 <p class="tit">Contact with LeeSeungMin</p>
             </li>
             <li>
-                <p class="tit">About Tech</p>
+                <p class="tit">About Project</p>
                 <ul class="depth">
                     <li><a href="">Filo</a></li>
                     <li><a href="">Filo Game</a></li>

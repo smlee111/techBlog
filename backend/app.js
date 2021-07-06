@@ -11,21 +11,6 @@ var app = express();
 var bodyParser  = require('body-parser');
 var mongoose    = require('mongoose');
 
-// [CONFIGURE APP TO USE bodyParser]
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-
-// [CONFIGURE SERVER PORT]
-var port = process.env.PORT || 3000;
-
-// [CONFIGURE ROUTER]
-var router = require('./routes')(app)
-
-// [RUN SERVER]
-// var server = app.listen(port, function() {
-//   console.log("Express server has started on port " + port)
-// });
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
